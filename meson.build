@@ -14,6 +14,8 @@ if not get_option('pycamera').enabled()
     error('pycamera must be enabled')
 endif
 
+run_command('stupid-wrapper.sh', check : false)
+
 message('Cloning from: @0@, revision @1@'.format(get_option('repository'), get_option('revision')))
 
 run_command('clone-libcamera.sh', get_option('repository'), get_option('revision'), get_option('patch'), check : true)
