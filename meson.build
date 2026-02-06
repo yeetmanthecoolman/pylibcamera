@@ -23,7 +23,7 @@ if r.returncode() == 0 and get_option('version') != 'unknown'
     version = r.stdout()
     message('libcamera version is @0@'.format(version))
     if version.strip() != get_option('version').strip()
-        message('This package works with libcamera version @0@, but you have version @1@ installed. Please check the readme for help with this error'.format(get_option('version'), version))
+        error('This package works with libcamera version @0@, but you have version @1@ installed. Please check the readme for help with this error'.format(get_option('version'), version))
     endif
 else
     message('Version Check Not Done')
