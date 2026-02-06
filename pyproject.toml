@@ -3,8 +3,8 @@ build-backend = 'mesonpy'
 requires = ['meson-python', 'pyyaml', 'pybind11', 'jinja2', 'ply']
 
 [project]
-name = 'rpi-libcamera'
-version = '0.1a11'
+name = 'hopium-libcamera'
+version = '0.0.1'
 description = 'libcamera python bindings'
 readme = 'README.md'
 
@@ -14,9 +14,9 @@ Source = "https://github.com/raspberrypi/pylibcamera"
 
 [tool.meson-python.args]
 setup = [
-    '-Drevision=v0.5.2+rpt20250903',
+    '-Drevision=main',
     '-Drepository=https://github.com/raspberrypi/libcamera.git',
-    '-Dversion=v0.5.2+99-bfd68f78'
+    '-Dversion=unknown'
 ]
 
 [tool.flit.module]
